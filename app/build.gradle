@@ -9,11 +9,12 @@ plugins {
 
 android {
     compileSdk 33
+    namespace 'com.fivegmag.ossmw' // Add this line with your package name
     ndkVersion '25.1.8937393'
     defaultConfig {
         applicationId "com.fivegmag.ossmw"
         minSdk 28
-        targetSdk 32
+        targetSdk 33
         versionCode 1
         versionName "1.0.0"
 
@@ -43,12 +44,13 @@ android {
     externalNativeBuild {
         cmake {
             path file('src/main/cpp/CMakeLists.txt')
-            version '3.26.1'
+            version '3.22.1'
 
         }
     }
     buildFeatures {
         viewBinding true
+        buildConfig true
     }
 }
 
